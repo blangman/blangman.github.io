@@ -331,6 +331,19 @@ nav { }
   color: var(--muted);
   font-style: italic;
 }
+.work .note {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+}
 
 /* skills */
 .skills {
