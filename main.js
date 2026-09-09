@@ -1,6 +1,6 @@
 "use strict";
 
-// Small progressive-enhancement script. The site is fully readable without it.
+// Small progressive-enhancement script. Every page works without it.
 
 // Current year in the footer.
 const yearEl = document.getElementById("year");
@@ -16,7 +16,6 @@ if (toggle && navLinks) {
     toggle.setAttribute("aria-expanded", String(open));
   });
 
-  // Close the menu after tapping a link.
   navLinks.addEventListener("click", (e) => {
     if (e.target.tagName === "A") {
       navLinks.classList.remove("open");
@@ -25,28 +24,8 @@ if (toggle && navLinks) {
   });
 }
 
-// Highlight the nav link for whichever section is in view.
-const linkFor = new Map();
-document.querySelectorAll(".nav-links a").forEach((a) => {
-  const id = a.getAttribute("href").slice(1);
-  if (id) linkFor.set(id, a);
-});
-
-const sections = [...linkFor.keys()]
-  .map((id) => document.getElementById(id))
-  .filter(Boolean);
-
-if ("IntersectionObserver" in window && sections.length) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        linkFor.forEach((el) => el.classList.remove("is-active"));
-        const active = linkFor.get(entry.target.id);
-        if (active) active.classList.add("is-active");
-      });
-    },
-    { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-  );
-  sections.forEach((section) => observer.observe(section));
-}
+// A hello for anyone who opens the console. Easter egg #2.
+console.log(
+  "%cHi. If you're reading this, you're my kind of person. Say hello: langmanbd@gmail.com",
+  "font-size:13px;color:#c05a34"
+);

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing · Benjamin Langman</title>
+  <meta name="description" content="Comedy and creative writing by Benjamin Langman — Hasty Pudding Theatricals, The Harvard Lampoon, and a parody novel in progress." />
+
+  <meta property="og:title" content="Writing · Benjamin Langman" />
+  <meta property="og:description" content="Hasty Pudding Theatricals, The Harvard Lampoon, and a parody novel in progress." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blangman.github.io/writing.html" />
+  <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="writing.html" aria-current="page">Writing</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <h1>Writing</h1>
+      <p class="measure">
+        Mostly comedy. A recorded show, a magazine, and a novel that isn't
+        finished yet.
+      </p>
+    </section>
+
+    <!-- ============================================================
+         WRITING ENTRIES
+         To add one: copy an <article class="work-card"> block.
+         Drop a thumbnail at assets/writing/<name>.jpg (about 800x500);
+         until it exists, a labelled placeholder shows automatically.
+         ============================================================ -->
+    <section class="section wrap">
+      <div class="work-list">
+
+        <article class="work-card">
+          <a class="work-thumb" href="https://vimeo.com/1206764425">
+            <img
+              src="assets/writing/hasty-pudding.jpg"
+              alt="Still from Salooney Tunes"
+              width="800" height="500"
+              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb-fallback',textContent:'Salooney Tunes'}))"
+            />
+          </a>
+          <div class="work-meta">
+            <h2>Salooney Tunes — Hasty Pudding Theatricals</h2>
+            <p>
+              I wrote the 177th annual musical for Hasty Pudding Theatricals, the
+              third-oldest theater organization in the world and Harvard
+              College's largest production.
+            </p>
+            <p class="work-links">
+              <a href="https://vimeo.com/1206764425">Watch the recorded show →</a>
+              <span class="note">password: <code>Hasty</code></span>
+            </p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-thumb" href="https://thehollywoodrepordurrr.com/">
+            <img
+              src="assets/writing/hollywood-repordurrr.jpg"
+              alt="The Hollywood Repordurrr"
+              width="800" height="500"
+              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb-fallback',textContent:'The Hollywood Repordurrr'}))"
+            />
+          </a>
+          <div class="work-meta">
+            <h2>The Harvard Lampoon</h2>
+            <p>
+              Staff writer for the oldest continuously published humor magazine
+              in the United States. Four of my pieces ran in
+              <em>The Hollywood Repordurrr</em>, and I was published in the
+              September&nbsp;1st issue of <em>The Hollywood Reporter</em>.
+            </p>
+            <p class="work-links">
+              <a href="https://thehollywoodrepordurrr.com/">Read the four pieces →</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <div class="work-thumb">
+            <div class="thumb-fallback" aria-hidden="true">In progress</div>
+          </div>
+          <div class="work-meta">
+            <h2>A parody novel</h2>
+            <p>
+              Commissioned by Penguin Random House. Still being written — check
+              back.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

@@ -6,10 +6,12 @@
   <title>Benjamin Langman</title>
   <meta name="description" content="Benjamin Langman — software engineer and writer. Mathematics and Government at Harvard." />
 
-  <!-- Open Graph / social preview -->
   <meta property="og:title" content="Benjamin Langman" />
   <meta property="og:description" content="Software engineer and writer. Mathematics and Government at Harvard." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blangman.github.io/" />
+  <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
+  <meta name="twitter:card" content="summary" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
@@ -17,9 +19,13 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- ============================================================
+       NAV — keep this block identical across every page.
+       Only the aria-current="page" attribute moves.
+       ============================================================ -->
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="wordmark" href="#top">Benjamin&nbsp;Langman</a>
+      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -27,11 +33,11 @@
 
       <nav>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#writing">Writing</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -39,21 +45,21 @@
 
   <main id="main">
     <!-- ============================================================
-         HERO
-         EDIT: your name, the one-line role, and the intro paragraph.
+         LANDING
+         EDIT: your name, the welcome line, and the links.
          ============================================================ -->
-    <section class="hero wrap" id="top">
-      <div class="hero-text">
+    <section class="landing wrap">
+      <div class="landing-text">
         <p class="eyebrow">Cambridge, MA</p>
-        <h1>Benjamin Langman</h1>
+        <h1>Benjamin&nbsp;Langman</h1>
         <p class="lede">
-          Thank you SO much for visiting my website. I feel like we're one step closer to becoming the best of friends.
+          Thank you SO much for visiting my website. I feel like we're one step
+          closer to becoming the best of friends.
         </p>
 
         <div class="hero-actions">
-          <a class="btn" href="#contact">Get in touch</a>
-          <!-- EDIT: point this at your resume file once you add it to /assets -->
-          <a class="btn btn-ghost" href="assets/Benjamin_Langman_Resume.pdf">Resume (PDF)</a>
+          <a class="btn" href="about.html">About me</a>
+          <a class="btn btn-ghost" href="writing.html">My writing</a>
         </div>
 
         <ul class="hero-links">
@@ -65,194 +71,47 @@
       </div>
 
       <figure class="portrait">
-        <!-- PLACEHOLDER: drop a square photo at assets/portrait.jpg (about 800x800).
-             Until then, a neutral placeholder is shown. -->
         <img
           src="assets/portrait.jpg"
           alt="Portrait of Benjamin Langman"
           width="320" height="320"
           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'portrait-fallback','aria-hidden':'true',textContent:'BL'}))"
         />
-        <figcaption></figcaption>
       </figure>
     </section>
 
     <!-- ============================================================
-         ABOUT
-         EDIT: this is the main "about me" prose. Two short paragraphs.
+         WHAT'S HERE — three cards linking into the site.
          ============================================================ -->
-    <section class="section wrap" id="about">
-      <p class="section-label">01 — About</p>
-      <div class="section-body prose">
-        <p>
-          Double Major in Math and Government at Harvard College. Two summers as a full-stack developer on IBM's security and encryption team, and three years working for and leading Harvard's premiere technical organization, Harvard Tech for Social Good. 
-        </p>
-        <p>
-          I also like to write! 
-          Currently working on a book commissioned by Penguin Random House
-
-          On the creative side: this year's Hasty
-          Pudding musical and staff writing for The Harvard Lampoon. Function
-          name or punchline, I care about getting the words right.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         EXPERIENCE (technical)
-         EDIT: add / remove <article class="entry"> blocks as needed.
-         Keep each to a role, org, dates, and one or two sentences.
-         ============================================================ -->
-    <section class="section wrap" id="experience">
-      <p class="section-label">02 — Experience</p>
-      <div class="section-body">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Full-Stack Developer Intern</h3>
-            <p class="entry-meta">IBM · Lowell, MA · Summer 2024 &amp; 2025</p>
-          </div>
-          <p>
-            Architected and shipped <strong>API Import</strong>, a flexible API
-            integration framework for Guardium, slated for the next major release.
-            In 2024, built a standalone Generic Universal Connector plugin that
-            automated audit-log ingestion and cut database-mapping time by roughly
-            90%.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Executive Director, then Software Engineer &amp; PM</h3>
-            <p class="entry-meta">Harvard Tech for Social Good · 2022 – 2025</p>
-          </div>
-          <p>
-            Led an organization of 11 directors and ~100 members delivering 15
-            software projects for nonprofit partners including UNICEF, the CDC,
-            the USDA, and the Trevor Project. Earlier, managed a four-engineer
-            team on a FreeCAD/Python blind-spot detection tool for the CDC and
-            built a React/Firebase app for the nonprofit MEANS. Designed and
-            maintain the org's website.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Research Assistant</h3>
-            <p class="entry-meta">ALARM Project (Prof. Kosuke Imai) · 2023 – 2024</p>
-          </div>
-          <p>
-            Developed and extended <strong>redist</strong>, an open-source R
-            package for redistricting simulation, and ran MCMC / Sequential Monte
-            Carlo analyses of Boston city-council districting plans.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Multivariable Calculus Course Assistant</h3>
-            <p class="entry-meta">Harvard University · 2023 – 2026</p>
-          </div>
-          <p>
-            Run workshops, review sessions, and office hours, and grade for
-            Math&nbsp;18A (Multivariable Calculus for the Social Sciences).
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         WRITING & CREATIVE
-         EDIT: paste an excerpt or add a link inside any .work block.
-         ============================================================ -->
-    <section class="section wrap" id="writing">
-      <p class="section-label">03 — Writing &amp; Creative</p>
-      <div class="section-body">
-        <article class="work">
-          <h3>Script Writer — Hasty Pudding Theatricals</h3>
-          <p>
-            Wrote <em>Salooney&nbsp;Tunes</em>, the 177th annual musical for Hasty
-            Pudding Theatricals — the third-oldest theater organization in the
-            world and Harvard College's largest production.
-          </p>
-          <p>
-            <a href="https://vimeo.com/1206764425">Watch the recorded show →</a>
-            <span class="note">password: <code>Hasty</code></span>
-          </p>
-        </article>
-
-        <article class="work">
-          <h3>Staff Writer — The Harvard Lampoon</h3>
-          <p>
-            Writer for the oldest continuously published humor magazine in the
-            United States.
-          </p>
-          <p>
-            <a href="https://thehollywoodrepordurrr.com/">Four pieces of mine at The Hollywood Repordurrr →</a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         SKILLS
-         EDIT: adjust the comma-separated lists inside each <dd>.
-         ============================================================ -->
-    <section class="section wrap" id="skills">
-      <p class="section-label">04 — Skills</p>
-      <div class="section-body">
-        <dl class="skills">
-          <div>
-            <dt>Languages</dt>
-            <dd>Python, Java, JavaScript, TypeScript, Go, C, R</dd>
-          </div>
-          <div>
-            <dt>Frameworks &amp; Libraries</dt>
-            <dd>React, Next.js</dd>
-          </div>
-          <div>
-            <dt>Databases</dt>
-            <dd>MongoDB, MySQL, Firebase (Firestore)</dd>
-          </div>
-          <div>
-            <dt>Spoken</dt>
-            <dd>English, Russian, French (fluent)</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         CONTACT
-         EDIT: the three links below.
-         ============================================================ -->
-    <section class="section wrap" id="contact">
-      <p class="section-label">05 — Contact</p>
-      <div class="section-body">
-        <p class="prose">
-          The fastest way to reach me is email. I'm also on GitHub and LinkedIn.
-        </p>
-        <ul class="contact-list">
-          <li>
-            <span class="contact-key">Email</span>
-            <a href="mailto:langmanbd@gmail.com">langmanbd@gmail.com</a>
-          </li>
-          <li>
-            <span class="contact-key">GitHub</span>
-            <a href="https://github.com/blangman" rel="me">github.com/blangman</a>
-          </li>
-          <li>
-            <span class="contact-key">LinkedIn</span>
-            <!-- EDIT: replace with your real LinkedIn URL -->
-            <a href="https://www.linkedin.com/in/YOUR-HANDLE/" rel="me">linkedin.com/in/YOUR-HANDLE</a>
-          </li>
-        </ul>
+    <section class="section wrap">
+      <p class="section-label">Start here</p>
+      <div class="card-grid">
+        <a class="card" href="about.html">
+          <h2>About</h2>
+          <p>Who I am, what I'm working on, and why I care about words.</p>
+          <span class="card-go">Read more →</span>
+        </a>
+        <a class="card" href="writing.html">
+          <h2>Writing</h2>
+          <p>Hasty Pudding, The Harvard Lampoon, and a novel in progress.</p>
+          <span class="card-go">Read more →</span>
+        </a>
+        <a class="card" href="cv.html">
+          <h2>CV</h2>
+          <p>Engineering roles, research, and teaching — plus the PDF.</p>
+          <span class="card-go">Read more →</span>
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- ============================================================
+       FOOTER — keep identical across every page.
+       (The period after the name is a quiet link. Easter egg #1.)
+       ============================================================ -->
   <footer class="site-footer">
     <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Benjamin Langman. Built with plain HTML &amp; CSS.</p>
+      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
     </div>
   </footer>
 

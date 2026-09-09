@@ -1,46 +1,58 @@
 # blangman.github.io
 
-Personal site for Benjamin Langman. One page, plain HTML/CSS/JS, no build step.
+Personal site for Benjamin Langman. Plain HTML/CSS/JS, no build step, hosted on
+GitHub Pages at **https://blangman.github.io**.
 
-Live at **https://blangman.github.io** once GitHub Pages is enabled
-(Settings → Pages → Deploy from a branch → `main` / root).
+## Pages
 
-## Files
-
-| File | Purpose |
+| File | Page |
 | --- | --- |
-| `index.html` | All content. Editable regions are marked with `<!-- EDIT: ... -->` comments. |
-| `styles.css` | Styling. Colors and spacing are CSS variables at the top (`:root`). |
-| `main.js` | Optional niceties: mobile menu, active-nav highlight, footer year. Site works without it. |
-| `assets/` | Photo, resume PDF, favicon — see `assets/README.md`. |
+| `index.html` | Home — landing with photo, intro, and three cards into the site |
+| `about.html` | About — the bio |
+| `writing.html` | Writing — Hasty Pudding, The Harvard Lampoon, the novel |
+| `cv.html` | CV — education, experience, skills, résumé PDF |
+| `contact.html` | Contact — email, GitHub, LinkedIn |
+| `404.html` | Shown for any unknown URL |
 
-## Editing the text
+Shared: `styles.css`, `main.js`, and the `assets/` folder (see
+`assets/README.md`). `robots.txt` and `sitemap.xml` help search engines index
+the site under your name.
 
-Open `index.html` and edit the words between the tags. The comments point you
-to each section:
+## Editing text
 
-- **Hero** — your name, one-line role, intro paragraph, and the email / GitHub /
-  LinkedIn / resume links.
-- **About** (`01`) — the two-paragraph "about me".
-- **Experience** (`02`) — duplicate an `<article class="entry">` block to add a role.
-- **Writing** (`03`) — add an excerpt with `<blockquote>` or a link inside a `.work` block.
-- **Skills** (`04`) — edit the comma-separated lists.
-- **Contact** (`05`) — the three links. Replace `YOUR-HANDLE` with your real
-  LinkedIn slug (also in the hero).
+Open the relevant `.html` file and edit the words between the tags. Editable
+spots are marked with `<!-- EDIT: ... -->`.
 
-## Changing the look
+**The nav and footer are copied into every page.** If you change a nav link or
+the footer, change it in all six HTML files (they're marked with a comment).
 
-Everything visual keys off the variables in `:root` at the top of `styles.css` —
-change `--accent` for a different accent color, `--maxw` for line width, etc.
-Dark mode is handled automatically from the reader's system setting.
+## Previewing before you publish
 
-## Publishing changes
+Open the file directly — changes show on reload, nothing goes live:
+
+```bash
+open ~/blangman.github.io/index.html
+```
+
+## Publishing
 
 ```bash
 cd ~/blangman.github.io
 git add -A
-git commit -m "Update about section"
+git commit -m "Update about page"
 git push
 ```
 
-GitHub Pages redeploys within a minute or two.
+GitHub Pages redeploys within a minute or two. Hard-reload (`Cmd+Shift+R`) if
+the browser shows a stale version.
+
+## Look and feel
+
+All colors, widths, and fonts are CSS variables in `:root` at the top of
+`styles.css`. Change `--accent` for a different accent color, `--measure` for
+text width, etc. Dark mode follows the reader's system setting automatically.
+
+## Two easter eggs
+
+1. The period after "Benjamin Langman" in the footer is a link to this repo.
+2. There's a message in the browser console (`main.js`).
