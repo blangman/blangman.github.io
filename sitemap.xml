@@ -2,7 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://blangman.github.io/</loc></url>
   <url><loc>https://blangman.github.io/about.html</loc></url>
+  <url><loc>https://blangman.github.io/resume.html</loc></url>
+  <url><loc>https://blangman.github.io/projects.html</loc></url>
   <url><loc>https://blangman.github.io/writing.html</loc></url>
-  <url><loc>https://blangman.github.io/cv.html</loc></url>
   <url><loc>https://blangman.github.io/contact.html</loc></url>
 </urlset>

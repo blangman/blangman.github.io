@@ -20,8 +20,26 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ============================================================
+       MASTHEAD — keep identical across every page.
+       Only the aria-current="page" marker moves.
+       ============================================================ -->
+  <header class="sheet masthead">
+    <a class="masthead-name" href="index.html">Benjamin Langman</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </header>
+
   <main class="splash">
-    <!-- EDIT: headshot, name, and the one line. That's the whole page. -->
+    <!-- EDIT: headshot and the one line. -->
     <img
       class="splash-photo"
       src="assets/portrait.jpg"
@@ -29,11 +47,12 @@
       width="180" height="180"
       onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'splash-photo splash-photo--fallback','aria-hidden':'true',textContent:'BL'}))"
     />
-    <h1>Benjamin Langman</h1>
     <p>
-      Thank you SO much for visiting my website. I feel like we are one step
+      Thank you SO much for visiting my website. I feel like we're one step
       closer to becoming the best of friends.
     </p>
   </main>
+
+  <script src="main.js" defer></script>
 </body>
 </html>
