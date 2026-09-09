@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Benjamin Langman</title>
-  <meta name="description" content="Benjamin Langman — software engineer and writer. Mathematics and Government at Harvard." />
+  <meta name="description" content="Benjamin Langman's personal website." />
 
   <meta property="og:title" content="Benjamin Langman" />
-  <meta property="og:description" content="Software engineer and writer. Mathematics and Government at Harvard." />
+  <meta property="og:description" content="Benjamin Langman's personal website." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blangman.github.io/" />
   <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
@@ -16,108 +16,24 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- ============================================================
-       NAV — keep this block identical across every page.
-       Only the aria-current="page" attribute moves.
-       ============================================================ -->
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-    <!-- ============================================================
-         LANDING
-         EDIT: your name, the welcome line, and the links.
-         ============================================================ -->
-    <section class="landing wrap">
-      <div class="landing-text">
-        <p class="eyebrow">Cambridge, MA</p>
-        <h1>Benjamin&nbsp;Langman</h1>
-        <p class="lede">
-          Thank you SO much for visiting my website. I feel like we're one step
-          closer to becoming the best of friends.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn" href="about.html">About me</a>
-          <a class="btn btn-ghost" href="writing.html">My writing</a>
-        </div>
-
-        <ul class="hero-links">
-          <li><a href="mailto:langmanbd@gmail.com">langmanbd@gmail.com</a></li>
-          <li><a href="https://github.com/blangman" rel="me">GitHub</a></li>
-          <!-- EDIT: replace YOUR-HANDLE with your real LinkedIn URL slug -->
-          <li><a href="https://www.linkedin.com/in/YOUR-HANDLE/" rel="me">LinkedIn</a></li>
-        </ul>
-      </div>
-
-      <figure class="portrait">
-        <img
-          src="assets/portrait.jpg"
-          alt="Portrait of Benjamin Langman"
-          width="320" height="320"
-          onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'portrait-fallback','aria-hidden':'true',textContent:'BL'}))"
-        />
-      </figure>
-    </section>
-
-    <!-- ============================================================
-         WHAT'S HERE — three cards linking into the site.
-         ============================================================ -->
-    <section class="section wrap">
-      <p class="section-label">Start here</p>
-      <div class="card-grid">
-        <a class="card" href="about.html">
-          <h2>About</h2>
-          <p>Who I am, what I'm working on, and why I care about words.</p>
-          <span class="card-go">Read more →</span>
-        </a>
-        <a class="card" href="writing.html">
-          <h2>Writing</h2>
-          <p>Hasty Pudding, The Harvard Lampoon, and a novel in progress.</p>
-          <span class="card-go">Read more →</span>
-        </a>
-        <a class="card" href="cv.html">
-          <h2>CV</h2>
-          <p>Engineering roles, research, and teaching — plus the PDF.</p>
-          <span class="card-go">Read more →</span>
-        </a>
-      </div>
-    </section>
+  <main class="splash">
+    <!-- EDIT: headshot, name, and the one line. That's the whole page. -->
+    <img
+      class="splash-photo"
+      src="assets/portrait.jpg"
+      alt="Benjamin Langman"
+      width="180" height="180"
+      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'splash-photo splash-photo--fallback','aria-hidden':'true',textContent:'BL'}))"
+    />
+    <h1>Benjamin Langman</h1>
+    <p>
+      Thank you SO much for visiting my website. I feel like we are one step
+      closer to becoming the best of friends.
+    </p>
   </main>
-
-  <!-- ============================================================
-       FOOTER — keep identical across every page.
-       (The period after the name is a quiet link. Easter egg #1.)
-       ============================================================ -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
-    </div>
-  </footer>
-
-  <script src="main.js" defer></script>
 </body>
 </html>

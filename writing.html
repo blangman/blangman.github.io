@@ -16,117 +16,84 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="writing.html" aria-current="page">Writing</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="sheet masthead">
+    <a class="masthead-name" href="index.html">Benjamin Langman</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="writing.html" aria-current="page">Writing</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </header>
 
-  <main id="main">
-    <section class="page-head wrap">
-      <h1>Writing</h1>
-      <p class="measure">
-        Mostly comedy. A recorded show, a magazine, and a novel that isn't
-        finished yet.
-      </p>
-    </section>
+  <main class="sheet manuscript" id="main">
+    <div class="leaf">
+      <p class="margin"></p>
+      <div class="body">
+        <h1 class="page-title">Writing</h1>
+      </div>
+    </div>
 
     <!-- ============================================================
-         WRITING ENTRIES
-         To add one: copy an <article class="work-card"> block.
-         Drop a thumbnail at assets/writing/<name>.jpg (about 800x500);
-         until it exists, a labelled placeholder shows automatically.
+         To add a piece: copy a .leaf block. The margin holds a one
+         or two word category; the body holds the work.
+         To add a picture, put it first in .body:
+           <figure class="plate"><img src="assets/writing/NAME.jpg" alt=""></figure>
          ============================================================ -->
-    <section class="section wrap">
-      <div class="work-list">
-
-        <article class="work-card">
-          <a class="work-thumb" href="https://vimeo.com/1206764425">
-            <img
-              src="assets/writing/hasty-pudding.jpg"
-              alt="Still from Salooney Tunes"
-              width="800" height="500"
-              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb-fallback',textContent:'Salooney Tunes'}))"
-            />
-          </a>
-          <div class="work-meta">
-            <h2>Salooney Tunes — Hasty Pudding Theatricals</h2>
-            <p>
-              I wrote the 177th annual musical for Hasty Pudding Theatricals, the
-              third-oldest theater organization in the world and Harvard
-              College's largest production.
-            </p>
-            <p class="work-links">
-              <a href="https://vimeo.com/1206764425">Watch the recorded show →</a>
-              <span class="note">password: <code>Hasty</code></span>
-            </p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <a class="work-thumb" href="https://thehollywoodrepordurrr.com/">
-            <img
-              src="assets/writing/hollywood-repordurrr.jpg"
-              alt="The Hollywood Repordurrr"
-              width="800" height="500"
-              onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb-fallback',textContent:'The Hollywood Repordurrr'}))"
-            />
-          </a>
-          <div class="work-meta">
-            <h2>The Harvard Lampoon</h2>
-            <p>
-              Staff writer for the oldest continuously published humor magazine
-              in the United States. Four of my pieces ran in
-              <em>The Hollywood Repordurrr</em>, and I was published in the
-              September&nbsp;1st issue of <em>The Hollywood Reporter</em>.
-            </p>
-            <p class="work-links">
-              <a href="https://thehollywoodrepordurrr.com/">Read the four pieces →</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-thumb">
-            <div class="thumb-fallback" aria-hidden="true">In progress</div>
-          </div>
-          <div class="work-meta">
-            <h2>A parody novel</h2>
-            <p>
-              Commissioned by Penguin Random House. Still being written — check
-              back.
-            </p>
-          </div>
-        </article>
-
+    <div class="leaf">
+      <p class="margin">Musical</p>
+      <div class="body">
+        <h3>Salooney Tunes</h3>
+        <p>
+          I wrote the 177th annual musical for Hasty Pudding Theatricals, the
+          third-oldest theater organization in the world and Harvard College's
+          largest production.
+        </p>
+        <p>
+          <a href="https://vimeo.com/1206764425">Watch the recorded show</a>.
+          The password is <em>Hasty</em>.
+        </p>
       </div>
-    </section>
+    </div>
+
+    <div class="leaf">
+      <p class="margin">Magazine</p>
+      <div class="body">
+        <h3>The Harvard Lampoon</h3>
+        <p>
+          Staff writer for the oldest continuously published humor magazine in
+          the United States. Four of my pieces ran in <em>The Hollywood
+          Repordurrr</em>, and I was published in the September&nbsp;1 issue of
+          <em>The Hollywood Reporter</em>.
+        </p>
+        <p><a href="https://thehollywoodrepordurrr.com/">Read the four pieces</a>.</p>
+      </div>
+    </div>
+
+    <div class="leaf">
+      <p class="margin"><span class="line">Book</span><span class="line"><em>forthcoming</em></span></p>
+      <div class="body">
+        <h3>A parody novel</h3>
+        <p>
+          Commissioned by Penguin Random House. Still being written; more here
+          when there's more to show.
+        </p>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
-    </div>
+  <footer class="sheet foot">
+    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
   </footer>
 
   <script src="main.js" defer></script>

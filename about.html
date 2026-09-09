@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About · Benjamin Langman</title>
-  <meta name="description" content="Benjamin Langman — Math and Government at Harvard, full-stack developer at IBM, and a writer for Hasty Pudding and The Harvard Lampoon." />
+  <meta name="description" content="Benjamin Langman — Mathematics and Government at Harvard, full-stack developer at IBM, and a writer for Hasty Pudding and The Harvard Lampoon." />
 
   <meta property="og:title" content="About · Benjamin Langman" />
-  <meta property="og:description" content="Math and Government at Harvard, full-stack developer at IBM, and a writer for Hasty Pudding and The Harvard Lampoon." />
+  <meta property="og:description" content="Mathematics and Government at Harvard, full-stack developer at IBM, and a writer for Hasty Pudding and The Harvard Lampoon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blangman.github.io/about.html" />
   <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
@@ -16,68 +16,65 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="cv.html">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="sheet masthead">
+    <a class="masthead-name" href="index.html">Benjamin Langman</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </header>
 
-  <main id="main">
-    <section class="page-head wrap">
-      <h1>About</h1>
-    </section>
+  <main class="sheet manuscript" id="main">
+    <div class="leaf">
+      <p class="margin"></p>
+      <div class="body"><h1 class="page-title">About</h1></div>
+    </div>
 
     <!-- ============================================================
-         ABOUT — this is your bio. Edit freely; keep it in your voice.
-         (Tidied from your working draft — check the facts read right.)
+         EDIT: your bio. Two paragraphs, in your voice.
+         (Cleaned up from your working draft — check the facts.)
          ============================================================ -->
-    <section class="section wrap">
-      <div class="section-body prose measure">
+    <div class="leaf">
+      <p class="margin">Technically</p>
+      <div class="body">
         <p>
-          Hi, my name is Ben. I'm a double major in Mathematics and Government at
-          Harvard College. For the last two summers I've been a full-stack
-          developer on IBM's security and encryption team, and for three years
-          I've worked for — and then led — Harvard Tech for Social Good, the
-          largest technical organization on campus.
-        </p>
-        <p>
-          I also like to write. Most recently I was published in the
-          September&nbsp;1st issue of <em>The Hollywood Reporter</em>, and I'm
-          currently working on a parody novel commissioned by Penguin Random
-          House. On the creative side I wrote this year's Hasty Pudding musical
-          and I'm on staff at The Harvard Lampoon.
-        </p>
-        <p>
-          Function name or punchline, I care about getting the words right.
+          I'm a double major in Mathematics and Government at Harvard. For the
+          last two summers I've been a full-stack developer on IBM's security
+          and encryption team, and for three years I worked for — and then led —
+          Harvard Tech for Social Good, the largest technical organization on
+          campus.
         </p>
       </div>
-    </section>
+    </div>
+
+    <div class="leaf">
+      <p class="margin">Otherwise</p>
+      <div class="body">
+        <p>
+          I also write. Most recently I was published in the September&nbsp;1
+          issue of <em>The Hollywood Reporter</em>, and I'm working on a parody
+          novel commissioned by Penguin Random House. I wrote this year's Hasty
+          Pudding musical, and I'm on staff at The Harvard Lampoon.
+        </p>
+        <p>Function name or punchline, I care about getting the words right.</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
-    </div>
+  <footer class="sheet foot">
+    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
   </footer>
 
   <script src="main.js" defer></script>

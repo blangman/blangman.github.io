@@ -16,157 +16,115 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="index.html">Benjamin&nbsp;Langman</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="writing.html">Writing</a></li>
-          <li><a href="cv.html" aria-current="page">CV</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header class="sheet masthead">
+    <a class="masthead-name" href="index.html">Benjamin Langman</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav" id="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="cv.html" aria-current="page">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </header>
 
-  <main id="main">
-    <section class="page-head wrap">
-      <h1>CV</h1>
-      <p class="measure">
-        The short version is below. The
-        <a href="assets/Benjamin_Langman_Resume.pdf">one-page PDF</a> has
-        everything.
-      </p>
-      <p>
-        <a class="btn" href="assets/Benjamin_Langman_Resume.pdf">Download resume (PDF)</a>
-      </p>
-    </section>
+  <main class="sheet manuscript" id="main">
+    <div class="leaf">
+      <p class="margin"></p>
+      <div class="body">
+        <h1 class="page-title">CV</h1>
+        <p>The one-page version has everything; this is the same, unfolded.</p>
+        <p><a class="filelink" href="assets/Benjamin_Langman_Resume.pdf">Download resume (PDF)</a></p>
+      </div>
+    </div>
 
     <!-- ============================================================
-         EDUCATION
+         Each role is a .leaf: the margin cites where and when,
+         the body says what. Copy a block to add one.
          ============================================================ -->
-    <section class="section wrap">
-      <p class="section-label">Education</p>
-      <div class="section-body">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Harvard University — AB, Mathematics and Government</h3>
-            <p class="entry-meta">Cambridge, MA · 2022 – 2026 · GPA 3.9</p>
-          </div>
-          <p>
-            Coursework in algorithms, data science, artificial intelligence,
-            discrete mathematics, and real analysis.
-          </p>
-        </article>
+    <div class="leaf">
+      <p class="margin"><span class="line">Harvard</span><span class="line">2022–2026</span><span class="line">GPA 3.9</span></p>
+      <div class="body">
+        <h3>AB, Mathematics and Government</h3>
+        <p>
+          Coursework in algorithms, data science, artificial intelligence,
+          discrete mathematics, and real analysis.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!-- ============================================================
-         EXPERIENCE
-         To add a role: copy an <article class="entry"> block.
-         ============================================================ -->
-    <section class="section wrap">
-      <p class="section-label">Experience</p>
-      <div class="section-body">
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Full-Stack Developer Intern — IBM</h3>
-            <p class="entry-meta">Lowell, MA · Summer 2024 &amp; 2025</p>
-          </div>
-          <p>
-            Architected and shipped <strong>API Import</strong>, a flexible API
-            integration framework for Guardium, slated for the next major
-            release. In 2024, built a standalone Generic Universal Connector
-            plugin that automated audit-log ingestion and cut database-mapping
-            time by roughly 90%.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Executive Director, then Software Engineer &amp; PM — Harvard Tech for Social Good</h3>
-            <p class="entry-meta">Cambridge, MA · 2022 – 2025</p>
-          </div>
-          <p>
-            Led an organization of 11 directors and ~100 members delivering 15
-            software projects for nonprofit partners including UNICEF, the CDC,
-            the USDA, and the Trevor Project. Earlier, managed a four-engineer
-            team on a FreeCAD/Python blind-spot detection tool for the CDC and
-            built a React/Firebase app for the nonprofit MEANS. Designed and
-            maintain the organization's website.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Research Assistant — ALARM Project</h3>
-            <p class="entry-meta">Prof. Kosuke Imai · 2023 – 2024</p>
-          </div>
-          <p>
-            Developed and extended <strong>redist</strong>, an open-source R
-            package for redistricting simulation, and ran MCMC / Sequential Monte
-            Carlo analyses of Boston city-council districting plans.
-          </p>
-        </article>
-
-        <article class="entry">
-          <div class="entry-head">
-            <h3>Multivariable Calculus Course Assistant — Harvard University</h3>
-            <p class="entry-meta">2023 – 2026</p>
-          </div>
-          <p>
-            Run workshops, review sessions, and office hours, and grade for
-            Math&nbsp;18A (Multivariable Calculus for the Social Sciences).
-          </p>
-        </article>
+    <div class="leaf">
+      <p class="margin"><span class="line">IBM</span><span class="line">Lowell, MA</span><span class="line">2024, 2025</span></p>
+      <div class="body">
+        <h3>Full-Stack Developer Intern</h3>
+        <p>
+          Architected and shipped API Import, a flexible API integration
+          framework for Guardium, slated for the next major release. In 2024 I
+          built a Generic Universal Connector plugin that automated audit-log
+          ingestion and cut database-mapping time by roughly 90 percent.
+        </p>
       </div>
-    </section>
+    </div>
 
-    <!-- ============================================================
-         SKILLS — edit the comma-separated lists.
-         ============================================================ -->
-    <section class="section wrap">
-      <p class="section-label">Skills</p>
-      <div class="section-body">
-        <dl class="skills">
-          <div>
-            <dt>Languages</dt>
-            <dd>Python, Java, JavaScript, TypeScript, Go, C, R</dd>
-          </div>
-          <div>
-            <dt>Frameworks &amp; Libraries</dt>
-            <dd>React, Next.js</dd>
-          </div>
-          <div>
-            <dt>Databases</dt>
-            <dd>MongoDB, MySQL, Firebase (Firestore)</dd>
-          </div>
-          <div>
-            <dt>Spoken</dt>
-            <dd>English, Russian, French (fluent)</dd>
-          </div>
-        </dl>
+    <div class="leaf">
+      <p class="margin"><span class="line">Harvard Tech</span><span class="line">for Social Good</span><span class="line">2022–2025</span></p>
+      <div class="body">
+        <h3>Executive Director; earlier Software Engineer and PM</h3>
+        <p>
+          Led 11 directors and about 100 members delivering 15 projects for
+          nonprofits including UNICEF, the CDC, and the Trevor Project. Earlier I
+          managed a four-engineer team on a FreeCAD blind-spot detection tool for
+          the CDC and built a React and Firebase app for the nonprofit MEANS.
+        </p>
       </div>
-    </section>
+    </div>
+
+    <div class="leaf">
+      <p class="margin"><span class="line">ALARM Project</span><span class="line">2023–2024</span></p>
+      <div class="body">
+        <h3>Research Assistant</h3>
+        <p>
+          Developed and extended redist, an open-source R package for
+          redistricting simulation, and ran Markov chain and Sequential Monte
+          Carlo analyses of Boston city-council districting plans, with Professor
+          Kosuke Imai.
+        </p>
+      </div>
+    </div>
+
+    <div class="leaf">
+      <p class="margin"><span class="line">Harvard</span><span class="line">2023–2026</span></p>
+      <div class="body">
+        <h3>Multivariable Calculus Course Assistant</h3>
+        <p>
+          Workshops, review sessions, office hours, and grading for Math&nbsp;18A,
+          Multivariable Calculus for the Social Sciences.
+        </p>
+      </div>
+    </div>
+
+    <!-- EDIT: the comma-separated lists. -->
+    <div class="leaf">
+      <p class="margin">Tools</p>
+      <div class="body">
+        <p><strong>Languages.</strong> Python, Java, JavaScript, TypeScript, Go, C, R.</p>
+        <p><strong>Frameworks.</strong> React, Next.js.</p>
+        <p><strong>Databases.</strong> MongoDB, MySQL, Firebase.</p>
+        <p><strong>Spoken.</strong> English, Russian, French.</p>
+      </div>
+    </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="footer-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
-    </div>
+  <footer class="sheet foot">
+    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
   </footer>
 
   <script src="main.js" defer></script>
