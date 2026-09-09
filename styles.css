@@ -19,7 +19,8 @@
   --measure: 40rem;          /* comfortable width for running text */
   --pad: clamp(1.25rem, 5vw, 2.5rem);
 
-  --serif: Georgia, "Times New Roman", Cambria, serif;
+  /* Fraunces for display (loaded from Google Fonts); Georgia as the fallback. */
+  --serif: "Fraunces", Georgia, "Times New Roman", Cambria, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, "Helvetica Neue", sans-serif;
 }
@@ -52,11 +53,21 @@ body {
   color: var(--text);
   font-family: var(--sans);
   font-size: 1.0625rem;
-  line-height: 1.65;
+  line-height: 1.72;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3 { line-height: 1.2; font-weight: 600; }
+h1, h2, h3 { line-height: 1.22; font-weight: 600; }
+
+/* Display headings use the serif at its display optical size. */
+.landing h1,
+.page-head h1,
+.wordmark {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
 
 a {
   color: var(--accent);
@@ -287,33 +298,36 @@ nav { }
 /* ---------- interior page headers ---------- */
 
 .page-head {
-  padding-top: clamp(2rem, 7vw, 3.5rem);
-  padding-bottom: 0.5rem;
+  padding-top: clamp(2.5rem, 8vw, 4.5rem);
+  padding-bottom: 1.25rem;
 }
 .page-head h1 {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(1.9rem, 6vw, 2.6rem);
-  margin: 0 0 0.5rem;
-  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 6vw, 2.9rem);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.015em;
+  /* a short accent tick under the title — one deliberate bold mark */
+  padding-bottom: 0.9rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
 }
-.page-head p { margin: 0.25rem 0; color: var(--muted); }
-.page-head .btn { margin-top: 0.5rem; }
+.page-head p { margin: 0.35rem 0; color: var(--muted); }
+.page-head .btn { margin-top: 0.75rem; }
 
 .measure { max-width: var(--measure); }
 
 /* ---------- sections ---------- */
 
 .section {
-  padding-block: clamp(2rem, 6vw, 3.25rem);
+  padding-block: clamp(2.75rem, 7vw, 4.25rem);
   border-top: 1px solid var(--border);
 }
-.page-head + .section { border-top: 0; padding-top: 1.5rem; }
+.page-head + .section { border-top: 0; padding-top: 1rem; }
 
 .section-label {
-  margin: 0 0 1.25rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  margin: 0 0 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -372,11 +386,11 @@ code {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 .card {
   display: block;
-  padding: 1.25rem;
+  padding: 1.6rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
@@ -389,8 +403,10 @@ code {
   transform: translateY(-2px);
 }
 .card h2 {
-  margin: 0 0 0.4rem;
-  font-size: 1.1rem;
+  font-family: var(--serif);
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
 }
 .card p {
   margin: 0 0 0.75rem;
@@ -441,8 +457,11 @@ code {
   background: color-mix(in srgb, var(--accent) 8%, var(--surface));
 }
 .work-meta h2 {
-  margin: 0 0 0.4rem;
-  font-size: 1.15rem;
+  font-family: var(--serif);
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.25;
 }
 .work-meta p { margin: 0 0 0.5rem; }
 .work-links { font-size: 0.95rem; }
