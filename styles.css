@@ -155,6 +155,23 @@ img { max-width: 100%; height: auto; }
   margin: 0;
 }
 
+/* "Here as a technical recruiter or a literary agent?" */
+.pick {
+  margin: 22px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+.pick a {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+  margin: 0 3px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.pick a:hover { color: var(--ink); border-color: var(--ink); }
+
 .photo-wrap {
   position: relative;
   max-width: 320px;
@@ -211,6 +228,17 @@ img { max-width: 100%; height: auto; }
   margin: 0 0 24px;
   max-width: 68ch;
 }
+
+.prose ul {
+  margin: 0 0 24px;
+  padding-left: 1.1em;
+  max-width: 68ch;
+}
+.prose li {
+  font-size: 18px;
+  margin: 0 0 14px;
+}
+.prose li::marker { color: var(--accent); }
 
 .prose a[href] {
   color: var(--accent);
