@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Benjamin Langman</title>
-  <meta name="description" content="Benjamin Langman's personal website." />
+  <meta name="description" content="Benjamin Langman — Mathematics and Government at Harvard, full-stack developer, and comedy writer." />
 
   <meta property="og:title" content="Benjamin Langman" />
-  <meta property="og:description" content="Benjamin Langman's personal website." />
+  <meta property="og:description" content="Mathematics and Government at Harvard, full-stack developer, and comedy writer." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blangman.github.io/" />
   <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
@@ -16,42 +16,93 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- ============================================================
-       MASTHEAD — keep identical across every page.
-       Only the aria-current="page" marker moves.
-       ============================================================ -->
-  <header class="sheet masthead">
-    <a class="masthead-name" href="index.html">Benjamin Langman</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav" id="nav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </header>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <main class="splash">
-    <!-- EDIT: headshot and the one line. -->
-    <img
-      class="splash-photo"
-      src="assets/portrait.jpg"
-      alt="Benjamin Langman"
-      width="180" height="180"
-      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'splash-photo splash-photo--fallback','aria-hidden':'true',textContent:'BL'}))"
-    />
+  <!-- ============================================================
+       NAV — keep identical across every page (only aria-current
+       and the About link's target differ: "#about" here,
+       "index.html#about" on the other pages).
+       ============================================================ -->
+  <nav class="site-nav">
+    <a class="wordmark" href="index.html">Benjamin Langman</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="writing.html">Writing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Benjamin Langman</h1>
+        <div class="rule"></div>
+        <!-- EDIT: the tagline. -->
+        <p class="tagline">
+          Thank you SO much for visiting my website. I feel like we're one step
+          closer to becoming the best of friends.
+        </p>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-offset" aria-hidden="true"></div>
+        <div class="photo-slot">
+          <!-- EDIT: swap assets/portrait.jpg for a new photo (4:5 crops best). -->
+          <img src="assets/portrait.jpg" alt="Benjamin Langman" width="320" height="400" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT — your bio. Edit the paragraphs freely.
+       ============================================================ -->
+  <main class="prose" id="about">
+    <h2>About</h2>
+
     <p>
-      Thank you SO much for visiting my website. I feel like we're one step
-      closer to becoming the best of friends.
+      I recently graduated from Harvard College with a double major in
+      Mathematics and Government, bouncing between courses like Real Analysis and
+      AI Policy. Extracurricularly, I was the President of Harvard Tech for
+      Social Good, overseeing the end-to-end creation of technical projects for
+      high-impact non-profits, as well as a research assistant for Kosuke Imai's
+      ALARM project, which focused on quantitative gerrymandering research.
+      Professionally, I worked as a full-stack developer intern at IBM over my
+      sophomore and junior summers.
+    </p>
+
+    <p>
+      I am also a huge fan of comedy &mdash; specifically comedy writing. In my
+      time at school, I was a staff writer at The Harvard Lampoon, the oldest
+      graduate comedy organization in the country, as well as my original
+      musical having been chosen by the Hasty Pudding Theatricals, the oldest
+      theater organization in the country, to be their 177th annual show. The
+      show had a 5-week residency in Cambridge, and proceeded to tour in New
+      York City and Bermuda. Currently, I'm developing a parody novel to be
+      published by Penguin Random House, and my work was just featured in the
+      September issue of The Hollywood Reporter (see
+      <a href="https://thehollywoodrepordurrr.com/" target="_blank" rel="noopener">here</a>).
+    </p>
+
+    <p>
+      Overall, I'm a generalist with a multidisciplinary background and
+      multidisciplinary interests, having either studied or participated at a
+      high level in the hard sciences, the social sciences, and the humanities. I
+      excel at working with people and have a lot of experience working
+      collaboratively on projects of varying complexity and on a deadline. I
+      credit this most to the fact that I am a deeply passionate person and fast
+      learner &mdash; if I care about something, I go all in every time.
     </p>
   </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year">2026</span> Benjamin Langman
+  </footer>
 
   <script src="main.js" defer></script>
 </body>

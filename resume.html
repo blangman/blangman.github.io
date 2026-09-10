@@ -16,115 +16,89 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="sheet masthead">
-    <a class="masthead-name" href="index.html">Benjamin Langman</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav" id="nav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html" aria-current="page">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="writing.html">Writing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </header>
+  <nav class="site-nav">
+    <a class="wordmark" href="index.html">Benjamin Langman</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="resume.html" aria-current="page">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="writing.html">Writing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <main class="sheet manuscript" id="main">
-    <div class="leaf">
-      <p class="margin"></p>
-      <div class="body">
-        <h1 class="page-title">Resume</h1>
-        <p>The one-page version has everything; this is the same, unfolded.</p>
-        <p><a class="filelink" href="assets/Benjamin_Langman_Resume.pdf">Download resume (PDF)</a></p>
-      </div>
+  <main class="prose" id="main">
+    <h1>Resume</h1>
+    <div class="rule"></div>
+    <p>The one-page version has everything; this is the same, unfolded.</p>
+    <p><a class="filelink" href="assets/Benjamin_Langman_Resume.pdf">Download resume (PDF)</a></p>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <h3>AB, Mathematics and Government</h3>
+      <p class="meta">Harvard University, 2022&ndash;2026. GPA 3.9.</p>
+      <p>
+        Coursework in algorithms, data science, artificial intelligence,
+        discrete mathematics, and real analysis.
+      </p>
     </div>
 
-    <!-- ============================================================
-         Each role is a .leaf: the margin cites where and when,
-         the body says what. Copy a block to add one.
-         ============================================================ -->
-    <div class="leaf">
-      <p class="margin"><span class="line">Harvard</span><span class="line">2022–2026</span><span class="line">GPA 3.9</span></p>
-      <div class="body">
-        <h3>AB, Mathematics and Government</h3>
-        <p>
-          Coursework in algorithms, data science, artificial intelligence,
-          discrete mathematics, and real analysis.
-        </p>
-      </div>
+    <h2>Experience</h2>
+    <div class="entry">
+      <h3>Full-Stack Developer Intern</h3>
+      <p class="meta">IBM, Lowell, MA. Summers 2024 and 2025.</p>
+      <p>
+        Architected and shipped API Import, a flexible API integration framework
+        for Guardium, slated for the next major release. In 2024 I built a
+        Generic Universal Connector plugin that automated audit-log ingestion and
+        cut database-mapping time by roughly 90 percent.
+      </p>
+    </div>
+    <div class="entry">
+      <h3>Executive Director, then Software Engineer and PM</h3>
+      <p class="meta">Harvard Tech for Social Good. 2022&ndash;2025.</p>
+      <p>
+        Led 11 directors and about 100 members delivering 15 projects for
+        nonprofits including UNICEF, the CDC, and the Trevor Project. Earlier I
+        managed a four-engineer team on a FreeCAD blind-spot detection tool for
+        the CDC and built a React and Firebase app for the nonprofit MEANS.
+      </p>
+    </div>
+    <div class="entry">
+      <h3>Research Assistant</h3>
+      <p class="meta">ALARM Project, with Professor Kosuke Imai. 2023&ndash;2024.</p>
+      <p>
+        Developed and extended redist, an open-source R package for redistricting
+        simulation, and ran Markov chain and Sequential Monte Carlo analyses of
+        Boston city-council districting plans.
+      </p>
+    </div>
+    <div class="entry">
+      <h3>Multivariable Calculus Course Assistant</h3>
+      <p class="meta">Harvard University. 2023&ndash;2026.</p>
+      <p>
+        Workshops, review sessions, office hours, and grading for Math&nbsp;18A,
+        Multivariable Calculus for the Social Sciences.
+      </p>
     </div>
 
-    <div class="leaf">
-      <p class="margin"><span class="line">IBM</span><span class="line">Lowell, MA</span><span class="line">2024, 2025</span></p>
-      <div class="body">
-        <h3>Full-Stack Developer Intern</h3>
-        <p>
-          Architected and shipped API Import, a flexible API integration
-          framework for Guardium, slated for the next major release. In 2024 I
-          built a Generic Universal Connector plugin that automated audit-log
-          ingestion and cut database-mapping time by roughly 90 percent.
-        </p>
-      </div>
-    </div>
-
-    <div class="leaf">
-      <p class="margin"><span class="line">Harvard Tech</span><span class="line">for Social Good</span><span class="line">2022–2025</span></p>
-      <div class="body">
-        <h3>Executive Director; earlier Software Engineer and PM</h3>
-        <p>
-          Led 11 directors and about 100 members delivering 15 projects for
-          nonprofits including UNICEF, the CDC, and the Trevor Project. Earlier I
-          managed a four-engineer team on a FreeCAD blind-spot detection tool for
-          the CDC and built a React and Firebase app for the nonprofit MEANS.
-        </p>
-      </div>
-    </div>
-
-    <div class="leaf">
-      <p class="margin"><span class="line">ALARM Project</span><span class="line">2023–2024</span></p>
-      <div class="body">
-        <h3>Research Assistant</h3>
-        <p>
-          Developed and extended redist, an open-source R package for
-          redistricting simulation, and ran Markov chain and Sequential Monte
-          Carlo analyses of Boston city-council districting plans, with Professor
-          Kosuke Imai.
-        </p>
-      </div>
-    </div>
-
-    <div class="leaf">
-      <p class="margin"><span class="line">Harvard</span><span class="line">2023–2026</span></p>
-      <div class="body">
-        <h3>Multivariable Calculus Course Assistant</h3>
-        <p>
-          Workshops, review sessions, office hours, and grading for Math&nbsp;18A,
-          Multivariable Calculus for the Social Sciences.
-        </p>
-      </div>
-    </div>
-
-    <!-- EDIT: the comma-separated lists. -->
-    <div class="leaf">
-      <p class="margin">Tools</p>
-      <div class="body">
-        <p><strong>Languages.</strong> Python, Java, JavaScript, TypeScript, Go, C, R.</p>
-        <p><strong>Frameworks.</strong> React, Next.js.</p>
-        <p><strong>Databases.</strong> MongoDB, MySQL, Firebase.</p>
-        <p><strong>Spoken.</strong> English, Russian, French.</p>
-      </div>
+    <h2>Skills</h2>
+    <div class="entry">
+      <p><strong>Languages.</strong> Python, Java, JavaScript, TypeScript, Go, C, R.</p>
+      <p><strong>Frameworks.</strong> React, Next.js.</p>
+      <p><strong>Databases.</strong> MongoDB, MySQL, Firebase.</p>
+      <p><strong>Spoken.</strong> English, Russian, French.</p>
     </div>
   </main>
 
-  <footer class="sheet foot">
-    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
+  <footer class="site-footer">
+    &copy; <span id="year">2026</span> Benjamin Langman
   </footer>
 
   <script src="main.js" defer></script>

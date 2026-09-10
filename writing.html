@@ -16,84 +16,59 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="sheet masthead">
-    <a class="masthead-name" href="index.html">Benjamin Langman</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav" id="nav">
-      <li><a href="about.html">About</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="writing.html" aria-current="page">Writing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </header>
+  <nav class="site-nav">
+    <a class="wordmark" href="index.html">Benjamin Langman</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">Projects</a>
+      <a href="writing.html" aria-current="page">Writing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <main class="sheet manuscript" id="main">
-    <div class="leaf">
-      <p class="margin"></p>
-      <div class="body">
-        <h1 class="page-title">Writing</h1>
-      </div>
+  <main class="prose" id="main">
+    <h1>Writing</h1>
+    <div class="rule"></div>
+    <p>Mostly comedy. A recorded show, a magazine, and a novel that isn't finished yet.</p>
+
+    <div class="entry">
+      <h3>Salooney Tunes</h3>
+      <p class="meta">Hasty Pudding Theatricals, 177th annual production.</p>
+      <p>
+        I wrote Hasty Pudding Theatricals' 177th annual musical, which had a
+        five-week residency in Cambridge and then toured to New York City and
+        Bermuda.
+        <a href="https://vimeo.com/1206764425" target="_blank" rel="noopener">Watch the recorded show</a>;
+        the password is Hasty.
+      </p>
     </div>
 
-    <!-- ============================================================
-         To add a piece: copy a .leaf block. The margin holds a one
-         or two word category; the body holds the work.
-         To add a picture, put it first in .body:
-           <figure class="plate"><img src="assets/writing/NAME.jpg" alt=""></figure>
-         ============================================================ -->
-    <div class="leaf">
-      <p class="margin">Musical</p>
-      <div class="body">
-        <h3>Salooney Tunes</h3>
-        <p>
-          I wrote the 177th annual musical for Hasty Pudding Theatricals, the
-          third-oldest theater organization in the world and Harvard College's
-          largest production.
-        </p>
-        <p>
-          <a href="https://vimeo.com/1206764425">Watch the recorded show</a>.
-          The password is <em>Hasty</em>.
-        </p>
-      </div>
+    <div class="entry">
+      <h3>The Harvard Lampoon</h3>
+      <p class="meta">Staff writer.</p>
+      <p>
+        Four of my pieces ran in <em>The Hollywood Repordurrr</em>, and my work
+        was featured in the September issue of <em>The Hollywood Reporter</em>.
+        <a href="https://thehollywoodrepordurrr.com/" target="_blank" rel="noopener">Read the four pieces</a>.
+      </p>
     </div>
 
-    <div class="leaf">
-      <p class="margin">Magazine</p>
-      <div class="body">
-        <h3>The Harvard Lampoon</h3>
-        <p>
-          Staff writer for the oldest continuously published humor magazine in
-          the United States. Four of my pieces ran in <em>The Hollywood
-          Repordurrr</em>, and I was published in the September&nbsp;1 issue of
-          <em>The Hollywood Reporter</em>.
-        </p>
-        <p><a href="https://thehollywoodrepordurrr.com/">Read the four pieces</a>.</p>
-      </div>
-    </div>
-
-    <div class="leaf">
-      <p class="margin"><span class="line">Book</span><span class="line"><em>forthcoming</em></span></p>
-      <div class="body">
-        <h3>A parody novel</h3>
-        <p>
-          Commissioned by Penguin Random House. Still being written; more here
-          when there's more to show.
-        </p>
-      </div>
+    <div class="entry">
+      <h3>A parody novel</h3>
+      <p class="meta">Forthcoming, Penguin Random House.</p>
+      <p>Still being written; more here when there's more to show.</p>
     </div>
   </main>
 
-  <footer class="sheet foot">
-    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
+  <footer class="site-footer">
+    &copy; <span id="year">2026</span> Benjamin Langman
   </footer>
 
   <script src="main.js" defer></script>

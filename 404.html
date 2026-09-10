@@ -8,36 +8,29 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="sheet masthead">
-    <a class="masthead-name" href="/">Benjamin Langman</a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav" id="nav">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/resume.html">Resume</a></li>
-      <li><a href="/projects.html">Projects</a></li>
-      <li><a href="/writing.html">Writing</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-    </ul>
-  </header>
-
-  <main class="sheet manuscript" id="main">
-    <div class="leaf">
-      <p class="margin">404</p>
-      <div class="body">
-        <h1 class="page-title">This page isn't here</h1>
-        <p>Try the navigation above, or go back to the <a href="/">home page</a>.</p>
-      </div>
+  <nav class="site-nav">
+    <a class="wordmark" href="/">Benjamin Langman</a>
+    <div class="nav-links">
+      <a href="/index.html#about">About</a>
+      <a href="/resume.html">Resume</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/writing.html">Writing</a>
+      <a href="/contact.html">Contact</a>
     </div>
+  </nav>
+
+  <main class="prose" id="main">
+    <h1>This page isn't here</h1>
+    <div class="rule"></div>
+    <p>Try the navigation above, or go back to the <a href="/">home page</a>.</p>
   </main>
 
-  <footer class="sheet foot">
-    <p>&copy; <span id="year">2026</span> Benjamin Langman<a class="foot-dot" href="https://github.com/blangman/blangman.github.io" title="built in the open">.</a></p>
+  <footer class="site-footer">
+    &copy; <span id="year">2026</span> Benjamin Langman
   </footer>
 
   <script src="/main.js" defer></script>
