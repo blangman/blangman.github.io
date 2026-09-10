@@ -12,8 +12,8 @@
   --panel: #EDEBF3;
   --line: #D9D5E4;
 
-  --serif: 'Bodoni Moda', 'Times New Roman', Georgia, serif;
   --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --serif: var(--sans); /* site is all sans-serif; kept so headings can diverge later */
 
   --wrap: 1100px;
   --measure: 680px;
