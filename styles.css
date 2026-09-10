@@ -155,22 +155,41 @@ img { max-width: 100%; height: auto; }
   margin: 0;
 }
 
-/* "Here as a technical recruiter or a literary agent?" */
-.pick {
-  margin: 22px 0 0;
-  font-size: 15px;
-  color: var(--muted);
+/* "Who are you?" — two boxes routing to the right resume */
+.who {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad) 24px;
 }
-.pick a {
+.who h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+.who-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.who-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid var(--line);
+}
+.who-label {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 19px;
+  font-size: 20px;
   color: var(--accent);
-  border-bottom: 1px solid var(--accent);
-  margin: 0 3px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  margin: 0;
 }
-.pick a:hover { color: var(--ink); border-color: var(--ink); }
+
+@media (max-width: 720px) {
+  .who-grid { grid-template-columns: 1fr; }
+}
 
 .photo-wrap {
   position: relative;
