@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects · Benjamin Langman</title>
-  <meta name="description" content="Things Benjamin Langman has built — an API integration framework at IBM, the redist R package, and software for nonprofits through Harvard Tech for Social Good." />
+  <meta name="description" content="Things Benjamin Langman has built — Guardium tooling at IBM, software for nonprofits through Harvard Tech for Social Good, a facial recognition tool, and a Snake game." />
 
   <meta property="og:title" content="Projects · Benjamin Langman" />
-  <meta property="og:description" content="An API integration framework at IBM, the redist R package, and software for nonprofits through Harvard Tech for Social Good." />
+  <meta property="og:description" content="Guardium tooling at IBM, software for nonprofits through Harvard Tech for Social Good, a facial recognition tool, and a Snake game." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blangman.github.io/projects.html" />
   <meta property="og:image" content="https://blangman.github.io/assets/portrait.jpg" />
@@ -40,35 +40,17 @@
 
     <!-- To add one: copy an .entry block. -->
     <div class="entry">
-      <h3>API Import</h3>
-      <p class="meta">IBM, 2025.</p>
+      <h3>Guardium tooling</h3>
+      <p class="meta">IBM. 2024&ndash;2025.</p>
       <p>
-        A flexible API integration framework for IBM Guardium. It lets customers
-        import external classification, vulnerability, and data-source
-        definitions on their own schedule, instead of waiting for those
-        definitions to ship in a product release. Built to be extended; slated
-        for the next major release.
-      </p>
-    </div>
-
-    <div class="entry">
-      <h3>Generic Universal Connector plugin</h3>
-      <p class="meta">IBM, 2024.</p>
-      <p>
-        A standalone plugin for the Guardium Data Protection team that automated
-        audit-log ingestion. It replaced a hand-built mapping process that took
-        about three months with one that takes about a week.
-      </p>
-    </div>
-
-    <div class="entry">
-      <h3>redist</h3>
-      <p class="meta">ALARM Project. R. 2023&ndash;2024.</p>
-      <p>
-        An open-source R package for redistricting simulation and analysis,
-        developed with Professor Kosuke Imai. I extended the package and used it
-        to study Boston city-council districting plans with Markov chain and
-        Sequential Monte Carlo methods.
+        Two pieces of IBM Guardium's data-protection product: a flexible API
+        integration framework that lets customers import external
+        classification, vulnerability, and data-source definitions on their own
+        schedule instead of waiting for a product release (built to be
+        extended, slated for the next major release), and a standalone plugin
+        that automated audit-log ingestion for the Universal Connector,
+        replacing a hand-built mapping process that took about three months
+        with one that takes about a week.
       </p>
     </div>
 
@@ -84,20 +66,24 @@
     </div>
 
     <div class="entry">
-      <h3>Vehicle blind-spot detection tool</h3>
-      <p class="meta">With the CDC. FreeCAD and Python. 2023.</p>
+      <h3>Facebot</h3>
+      <p class="meta">Python, OpenCV. 2024.</p>
       <p>
-        A tool for modeling vehicle blind spots, built for the CDC. I managed a
-        team of four engineers on it.
+        A facial detection and recognition tool that spots and identifies faces
+        from a live video feed. See the code
+        <a href="https://github.com/blangman/OL-Facebot" target="_blank" rel="noopener">here</a>.
       </p>
     </div>
 
     <div class="entry">
-      <h3>Food-donation tracker</h3>
-      <p class="meta">For MEANS. React and Firebase. 2022.</p>
+      <h3>Snake</h3>
+      <p class="meta">JavaScript. 2026.</p>
       <p>
-        A React web app on Firebase Firestore for the nonprofit MEANS, to
-        streamline parsing and tracking of food donations.
+        A canvas Snake game with a fixed game-tick decoupled from the render
+        loop, so speed stays frame-rate independent; eating food shortens the
+        tick, so it gets faster as you score, and walls can wrap instead of
+        killing you. See the code
+        <a href="https://github.com/blangman/snakegame" target="_blank" rel="noopener">here</a>.
       </p>
     </div>
   </main>
