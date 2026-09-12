@@ -1,16 +1,16 @@
 /* ============================================================
    Benjamin Langman — personal site
-   Newsreader (display) + Inter (text), violet accent on near-white.
+   Instrument Sans throughout, lilac accent on dark ink.
    Design values live in :root.
    ============================================================ */
 
 :root {
-  --bg: #FAFAF9;
-  --ink: #17151F;
-  --muted: #6E6B78;
-  --accent: #453C7C;
-  --panel: #EDEBF3;
-  --line: #D9D5E4;
+  --bg: #17151F;
+  --ink: #F2F0F6;
+  --muted: #9A96AA;
+  --accent: #8F7FE0;
+  --panel: #241F30;
+  --line: #383049;
 
   --sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --serif: var(--sans); /* site is all sans-serif; kept so headings can diverge later */
@@ -22,7 +22,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: dark; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
