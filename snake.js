@@ -129,13 +129,20 @@
   }
 
   // Snake starts a little longer than a single dot, already moving
-  // down, with a fruit already placed a few cells below the head (in
-  // that same clear lane), so the very first tick shows what to do.
+  // down, with a fruit directly under the head so the very first move
+  // eats it. Tail rows are wrapped the same way movement wraps (never
+  // just subtracted) so a cramped viewport — where findStart() has to
+  // fall back to a plain free cell with no guaranteed room above it —
+  // can't leave a segment sitting off-canvas at a negative row; if the
+  // fallback lands somewhere that tight, the tail is trimmed instead
+  // of drawn on top of a wall.
   function reset() {
     const start = findStart();
-    snake = [];
-    for (let i = 0; i < START_LEN; i++) {
-      snake.push({ r: start.r - i, c: start.c });
+    snake = [{ r: start.r, c: start.c }];
+    for (let i = 1; i < START_LEN; i++) {
+      const cell = { r: ((start.r - i) % rows + rows) % rows, c: start.c };
+      if (obstacles.has(cellKey(cell))) break;
+      snake.push(cell);
     }
     dir = { r: 1, c: 0 };
     nextDir = dir;
@@ -143,7 +150,7 @@
     alive = true;
     msgEl.hidden = true;
     scoreEl.textContent = "0";
-    fruit = { r: Math.min(start.r + RUNWAY - 1, rows - 1), c: start.c };
+    fruit = { r: (start.r + 1) % rows, c: start.c };
   }
 
   function tick() {
