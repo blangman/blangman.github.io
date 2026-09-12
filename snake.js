@@ -107,31 +107,36 @@
     draw();
   }
 
-  // A start cell with a genuinely clear run of rows beneath it — not
-  // just a free cell, since the tagline and photo are wide enough
-  // that "free" alone doesn't mean "safe to drive straight down
-  // through." Scans column by column so it also copes with the
-  // stacked mobile layout, where the tagline can span the full width.
+  // A start cell with a genuinely clear run of rows both above it
+  // (room for the starting tail) and below it (room to reach the
+  // first fruit) — not just a free cell, since the tagline and photo
+  // are wide enough that "free" alone doesn't mean "safe to sit in."
+  // Scans column by column so it also copes with the stacked mobile
+  // layout, where the tagline can span the full width.
+  const START_LEN = 3;
   const RUNWAY = 5;
   function findStart() {
     for (let c = 0; c < cols; c++) {
-      for (let r = 0; r <= rows - RUNWAY; r++) {
+      for (let r = START_LEN - 1; r <= rows - RUNWAY; r++) {
         let clear = true;
-        for (let k = 0; k < RUNWAY; k++) {
+        for (let k = -(START_LEN - 1); k < RUNWAY; k++) {
           if (obstacles.has(`${r + k},${c}`)) { clear = false; break; }
         }
         if (clear) return { r, c };
       }
     }
-    return freeCell(0, Math.floor(cols / 2));
+    return freeCell(START_LEN - 1, Math.floor(cols / 2));
   }
 
-  // Snake starts already moving down, with a fruit already placed a
-  // few cells below it (inside that same clear runway), so the very
-  // first tick shows what to do.
+  // Snake starts a little longer than a single dot, already moving
+  // down, with a fruit already placed a few cells below the head (in
+  // that same clear lane), so the very first tick shows what to do.
   function reset() {
     const start = findStart();
-    snake = [start];
+    snake = [];
+    for (let i = 0; i < START_LEN; i++) {
+      snake.push({ r: start.r - i, c: start.c });
+    }
     dir = { r: 1, c: 0 };
     nextDir = dir;
     score = 0;
