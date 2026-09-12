@@ -57,6 +57,20 @@
         </div>
       </div>
     </div>
+
+    <!-- ============================================================
+         SNAKE — decorative, keyboard-driven. Uses the hero itself as
+         the board; the tagline and the photo are the only walls.
+         Purely progressive enhancement: see snake.js.
+         ============================================================ -->
+    <div class="snake-layer" aria-hidden="true">
+      <canvas class="snake-canvas"></canvas>
+      <div class="snake-hud">
+        <span class="snake-hint">&uarr;&darr;&larr;&rarr; / WASD</span>
+        <span class="snake-score">0</span>
+      </div>
+      <p class="snake-msg" hidden></p>
+    </div>
   </section>
 
   <!-- ============================================================
@@ -104,5 +118,6 @@
   </footer>
 
   <script src="main.js" defer></script>
+  <script src="snake.js" defer></script>
 </body>
 </html>
